@@ -1,0 +1,3 @@
+rootProject.name = 'ha_ui'
+
+include ':app'
