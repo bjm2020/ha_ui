@@ -6,11 +6,13 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Dashboard from '../screens/Dashboard';
 import Lighting from '../screens/Lighting';
 import Settings from '../screens/Settings';
+import AirCondition from '../screens/AirCondition';
 
 export const Tabs = TabNavigator({
   Dashboard: { screen: Dashboard },
    Lighting: { screen: Lighting },
-   Settings: { screen: Settings }
+   Settings: { screen: Settings },
+   AirCondition: { screen: AirCondition }
  }, {
    tabBarComponent: NavigationComponent,
    tabBarPosition: 'bottom',
@@ -30,9 +32,11 @@ export const Tabs = TabNavigator({
          Settings: {
            barBackgroundColor: '#EEEEEE',
            labelColor: '#434343', // like in the standalone version, this will override the already specified `labelColor` for this tab
-           activeLabelColor: '#212121',
-           activeIcon: <Icon size={24} color="#212121" name="newsstand" />
-         }
+           activeLabelColor: '#212121'
+         },
+         AirCondition: {
+           barBackgroundColor: '#00796B'
+         },
        }
      }
    }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, Dimensions } from 'react-native';
-import { Button } from './common';
+import { Button } from '../common';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon2 from 'react-native-vector-icons/Octicons';
 
@@ -12,9 +12,9 @@ class DshTherm extends Component {
             <Text style={styles.headerText}>Thermostat</Text>
           </View>
           <View style={styles.content}>
-              <Icon name="fan" size={80} color="#900" />
+              <Icon name="fan" size={100} color="#900" />
               <Text style={styles.contentText}>21° C</Text>
-              <Icon2 name="settings" size={80} color="#900" />
+              <Icon2 name="settings" size={100} color="#900" />
           </View>
         </View>
       );
@@ -38,12 +38,13 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   content: {
+    margin: 30,
     flex: 1,
     flexDirection: 'row',
     alignContent: 'space-around'
   },
   contentText: {
-    fontSize: 80,
+    fontSize: 100,
     fontWeight: 'bold',
     color: 'white',
     justifyContent: 'space-around'

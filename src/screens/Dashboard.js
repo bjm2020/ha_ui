@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Header from '../components/Header';
-import DshTerm from '../components/Dsh_Thermostat';
+import DshTerm from '../components/Dashboard/Dsh_Thermostat';
 
 
 class Dashboard extends Component {
@@ -15,12 +15,16 @@ class Dashboard extends Component {
   render() {
     return (
 <View style={styles.main}>
-  <View style={styles.box, styles.box1}>
+  <View style={styles.box1}>
   <Header />
   </View>
-  <View style={styles.box,styles.box2}>
+  <View style={styles.box2}>
         <View style={styles.box2content}>
-          <ScrollView contentContainerStyle={{alignItems: 'center'}} pagingEnabled={true} horizontal={true}>
+          <ScrollView pagingEnabled={true} horizontal={true}
+          decelerationRate={0}
+          snapToInterval={(width *.50) - 60}
+          snapToAlignment={'center'}
+          >
             <DshTerm />
             <DshTerm />
             <DshTerm />
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   box1: {
-    flex: 0.10,
+    flex: 0.05,
     paddingTop: 50,
     backgroundColor: '#2196F3'
   },
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
     flex: .60
   },
   box2: {
-    flex: 0.50,
+    flex: 0.70,
     flexDirection: 'row',
     backgroundColor: '#8BC34A'
   },
